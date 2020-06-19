@@ -1,0 +1,34 @@
+version: '3.2'
+services:
+
+  nginx:
+    container_name: some-nginx
+    build:
+      context: ./../../application
+      dockerfile: ./infrastructure/docker/nginx/Dockerfile
+    volumes:
+      - type: bind
+        source: ./../../application
+        target: /var/www/html
+    ports:
+      - "17000:80"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
